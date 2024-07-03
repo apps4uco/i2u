@@ -7,7 +7,7 @@ authors = ["Apps4u_co"]
 homepage="https://apps4u.co/"
 documentation="https://docs.rs/i2u"
 repository="https://github.com/apps4uco/i2u"
-keywords = ["display","debug","binary","octal","hex","to_string"]
+keywords = ["display","debug","binary","hex","to_string"]
 categories = ["rust-patterns","value-formatting","encoding"]
 #TODO no-std
 license = "MIT OR Apache-2.0"
