@@ -1,6 +1,6 @@
 [package]
 name = "i2u"
-version = "0.9.0"
+version = "0.9.1"
 edition = "2021"
 description = "Common useful functions, that are Zero cost abstractions using generics, to easily convert numbers to binary, hex, octal, and convert any type that implements Debug into a String."
 authors = ["Apps4u_co"]
@@ -13,7 +13,19 @@ categories = ["rust-patterns","value-formatting","encoding"]
 license = "MIT OR Apache-2.0"
 
 [dependencies]
+##! ### Optional dependencies
+
+### Enable this feature to implement the chunk_join function for Strings and &str
 itertools = { version = "0.13.0", optional = true }
+### This feature is only used when creating the documentation
+document-features = { version = "0.2", optional = true }
 
 [features]
+##! Features
+
+### Enable the itertools feature to enable the `chunk_join` function
 itertools = ["dep:itertools"]
+
+[package.metadata.docs.rs]
+features = ["document-features","itertools"]
+rustdoc-args = ["--cfg", "docsrs"]

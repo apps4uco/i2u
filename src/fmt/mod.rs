@@ -293,6 +293,7 @@ pub fn upper_hex_zeropad<const N: usize, H: UpperHex>(h: H) -> String {
 }
 
 #[cfg(feature = "itertools")]
+#[cfg_attr(docsrs, doc(cfg(feature = "itertools")))]
 /// Takes a String or &str chunks it into groups of chunk_size characters and joins them with separator returns a String
 ///
 /// # Example
